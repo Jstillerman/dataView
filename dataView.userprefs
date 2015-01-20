@@ -1,0 +1,16 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/location.cs">
+    <Files>
+      <File FileName="Assets/ident.js" Line="7" Column="1" />
+      <File FileName="Assets/mainScript.js" Line="127" Column="1" />
+      <File FileName="Assets/location.cs" Line="26" Column="1" />
+      <File FileName="Assets/Cardboard/DemoScene/Teleport.cs" Line="24" Column="53" />
+      <File FileName="Assets/raycast.cs" Line="7" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
