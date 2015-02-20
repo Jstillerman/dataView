@@ -24,9 +24,9 @@ public class controls : MonoBehaviour {
 		x = Mathf.Sin (rotation);
 		z = Mathf.Cos (rotation);
 
-		//if (Input.GetKey (KeyCode.W) || Input.GetKey (KeyCode.UpArrow)) {
+		if (Input.GetKey (KeyCode.W) || Input.GetKey (KeyCode.UpArrow)) {
 			transform.parent.Translate (new Vector3 (x * Time.deltaTime*speed, 0, z * Time.deltaTime*speed));
-		//}
+		}
 		if (Input.GetKey (KeyCode.S) || Input.GetKey (KeyCode.DownArrow)) {
 			transform.parent.Translate (new Vector3 (-x * Time.deltaTime*speed, 0, -z * Time.deltaTime*speed));
 		}

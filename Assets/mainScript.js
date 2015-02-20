@@ -1,5 +1,6 @@
 ﻿#pragma strict
 import SimpleJSON;
+import System.IO;
 
 var data : WWW = null; //Initiate a WWW 
 var numberOfObjects = 0.0;
@@ -8,7 +9,8 @@ var vanilla = true;
 var N = JSON.Parse("");
 
 
-public var url = "http://www.psfc.mit.edu/~jas/genray_scaled.json";
+
+public var url = "www.poop.com";
 				 //This is changeable based on clients needs.
 var colors = [Color.red, Color.green, Color.blue, Color.magenta, Color.white, Color.cyan, Color.yellow];
 var tags   = ["alpha", "bravo", "zeta", "beta", "panda", "chicken", "fish", "Apricot"];
@@ -18,6 +20,12 @@ public var show = [false, false, false, false, false, false, false];
 
 
 function Start () {
+
+
+var sr = new StreamReader("settings.temp");
+
+url = sr.ReadToEnd();
+
 
 data = new WWW(url); //THIS ACTUALL FETCHES THE DATA
 
