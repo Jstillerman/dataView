@@ -1,7 +1,7 @@
 ﻿#pragma strict
 import SimpleJSON;
 
-var data : WWW = null; //Initiate a WWW 
+var data : WWW = null; //Initiate a WWW
 var numberOfObjects = 0.0;
 var timeStep = 0;
 var vanilla = true;
@@ -30,8 +30,8 @@ if(data.isDone && vanilla){
 	Debug.Log(data.text);
 	N = JSON.Parse(data.text);
 	numberOfObjects = N["nray"].AsFloat;
-	InvokeRepeating("thing", 0.3, 0.2);
-	
+	InvokeRepeating("thing", 0.001, 0.001);
+
 }
 
 //OTHER UPDATE STUFF
@@ -48,17 +48,17 @@ var parsed = int.Parse(key) - 1;
  cube.GetComponent.<Renderer>().enabled = show[parsed];
  }
   show[parsed] = show[parsed] ? false : true;
-        
+
 }
 }
- 
+
  		  var hit : RaycastHit;
        var fwd = transform.position;
 		if (Physics.Raycast (transform.position, fwd, hit)) {
 		hit.collider.gameObject.GetComponent.<Renderer>().material.color = Color.white;
 		}
-    
-     
+
+
 
 /////
 }
@@ -75,21 +75,21 @@ for (var i = 0; i < numberOfObjects; i++){
 	pos.z = N["values"]["wx"][i][timeStep].AsFloat;
 	pos.x = N["values"]["wy"][i][timeStep].AsFloat;
 	pos.y = N["values"]["wz"][i][timeStep].AsFloat;
-	
+
 	if(pos.x + pos.y +pos.z != 0){
 	var sphere : GameObject = GameObject.CreatePrimitive(PrimitiveType.Cube);
 	sphere.transform.position = pos;
-	
-	
+
+
 	var values = "";
 	for (name in N["names"]){
 	var realName = name.ToString()[0:-1][1:];
-	
-	values += realName + ": " + (N["values"][realName][i][timeStep].AsFloat) + "\n"; 
+
+	values += realName + ": " + (N["values"][realName][i][timeStep].AsFloat) + "\n";
 	}
-	
+
 	//Debug.Log(values);
-	
+
 	//var identification = sphere.gameObject.AddComponent ("ident");
 
 	UnityEngineInternal.APIUpdaterRuntimeServices.AddComponent (sphere, "Assets/mainScript.js(95,9)", "raycast");
@@ -99,24 +99,24 @@ for (var i = 0; i < numberOfObjects; i++){
 	var size = N["values"][sizekey][i][timeStep].AsFloat;
 
 	var hue = N["values"][N["colorkey"].Value][i][timeStep].AsFloat;
-	
-	
+
+
 	var myColor = Color.red;
 	myColor.r = hue;
 
-	
+
 
 	sphere.GetComponent.<Renderer>().material.color = myColor;
-	
+
 	size *= size;
 	size /= 2;
 	sphere.transform.localScale = new Vector3(size, size, size);
 	sphere.tag = tags[i];
-	
+
 	//sphere.GetComponent(Renderer).material.color = colors[i];
-	
+
 	}
-	
+
 }
 
 timeStep++;
@@ -131,5 +131,3 @@ timeStep++;
 ///// color - conversion done still need this set up
 ///// size  - all done on your part
 ///// gui   - doesnt want to iterate :[
-
-
