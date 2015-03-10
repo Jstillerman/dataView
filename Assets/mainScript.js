@@ -45,7 +45,7 @@ var parsed = int.Parse(key) - 1;
  var cubes = GameObject.FindGameObjectsWithTag(tags[parsed]);
 
  for (cube in cubes){
- cube.renderer.enabled = show[parsed];
+ cube.GetComponent.<Renderer>().enabled = show[parsed];
  }
   show[parsed] = show[parsed] ? false : true;
         
@@ -55,7 +55,7 @@ var parsed = int.Parse(key) - 1;
  		  var hit : RaycastHit;
        var fwd = transform.position;
 		if (Physics.Raycast (transform.position, fwd, hit)) {
-		hit.collider.gameObject.renderer.material.color = Color.white;
+		hit.collider.gameObject.GetComponent.<Renderer>().material.color = Color.white;
 		}
     
      
@@ -92,7 +92,7 @@ for (var i = 0; i < numberOfObjects; i++){
 	
 	//var identification = sphere.gameObject.AddComponent ("ident");
 
-	sphere.AddComponent ("raycast");
+	UnityEngineInternal.APIUpdaterRuntimeServices.AddComponent (sphere, "Assets/mainScript.js(95,9)", "raycast");
 	sphere.BroadcastMessage("addValue", values);
 	var sizekey = N["sizekey"].Value;
 	Debug.Log(sizekey);
@@ -106,7 +106,7 @@ for (var i = 0; i < numberOfObjects; i++){
 
 	
 
-	sphere.renderer.material.color = myColor;
+	sphere.GetComponent.<Renderer>().material.color = myColor;
 	
 	size *= size;
 	size /= 2;

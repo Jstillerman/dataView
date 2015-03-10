@@ -12,7 +12,7 @@ public class raycast : MonoBehaviour {
 		head = Camera.main.GetComponent<StereoController>().Head;
 		tag = GameObject.Find ("text");
 		Debug.Log ("raycast enabled");
-		theColor = renderer.material.color;
+		theColor = GetComponent<Renderer>().material.color;
 	}
 
 	void Update () {

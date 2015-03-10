@@ -19,7 +19,7 @@ function Update () {
 }
 
 function relocate(){
-rigidbody.position = areas[locationIndex];
+GetComponent.<Rigidbody>().position = areas[locationIndex];
 locationIndex += 1;
 if (locationIndex == areas.Length){locationIndex = 0;}
 }
