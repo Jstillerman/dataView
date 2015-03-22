@@ -73,6 +73,7 @@
      <Compile Include="Assets\OVR\Scripts\Util\OVRScreenFade.cs" />
      <Compile Include="Assets\OVR\Scripts\Util\OVRUGUI.cs" />
      <Compile Include="Assets\OVR\Scripts\Util\OVRVisionGuide.cs" />
+     <Compile Include="Assets\centereyehack.cs" />
      <Compile Include="Assets\controls.cs" />
      <Compile Include="Assets\location.cs" />
      <Compile Include="Assets\raycast.cs" />
