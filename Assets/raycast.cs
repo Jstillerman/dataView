@@ -17,7 +17,7 @@ public class raycast : MonoBehaviour {
 
 	void Update () {
 		Ray theGaze = new Ray(head.transform.position, head.transform.forward);
-		Debug.DrawRay(head.transform.position, head.transform.forward*10, Color.white, 1.0f, true);
+		//Debug.DrawRay(head.transform.position, head.transform.forward*10, Color.white, 1.0f, true);
 		RaycastHit hit;
 		bool isLookedAt = GetComponent<Collider>().Raycast(theGaze, out hit, Mathf.Infinity);
 		GetComponent<Renderer>().material.color = isLookedAt ? Color.green : theColor;
@@ -28,5 +28,6 @@ public class raycast : MonoBehaviour {
 
 	void addValue(string val){
 		value = value + val;
+		
 	}
 }

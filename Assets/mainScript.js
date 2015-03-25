@@ -7,7 +7,7 @@ var timeStep = 0;
 var vanilla = true;
 var N = JSON.Parse("");
 
-
+public var cubePref: GameObject;
 public var url = "http://www.psfc.mit.edu/~jas/genray_scaled.json";
 				 //This is changeable based on clients needs.
 var colors = [Color.red, Color.green, Color.blue, Color.magenta, Color.white, Color.cyan, Color.yellow];
@@ -77,7 +77,7 @@ for (var i = 0; i < numberOfObjects; i++){
 	pos.y = N["values"]["wz"][i][timeStep].AsFloat;
 
 	if(pos.x + pos.y +pos.z != 0){
-	var sphere : GameObject = GameObject.CreatePrimitive(PrimitiveType.Cube);
+	var sphere : GameObject = Instantiate(cubePref);
 	sphere.transform.position = pos;
 
 
@@ -92,7 +92,9 @@ for (var i = 0; i < numberOfObjects; i++){
 
 	//var identification = sphere.gameObject.AddComponent ("ident");
 
-	UnityEngineInternal.APIUpdaterRuntimeServices.AddComponent (sphere, "Assets/mainScript.js(95,9)", "raycast");
+	//UnityEngineInternal.APIUpdaterRuntimeServices.AddComponent (sphere, "Assets/mainScript.js(95,9)", "raycast");
+	//UnityEngineInternal.APIUpdaterRuntimeServices.AddComponent (sphere, "Assets/mainScript.js(96,9)", "raycast");
+	//Debug.Log(MeshRenderer);
 	sphere.BroadcastMessage("addValue", values);
 	var sizekey = N["sizekey"].Value;
 	Debug.Log(sizekey);
