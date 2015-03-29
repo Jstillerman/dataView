@@ -2,12 +2,13 @@ import os, time
 
 def doodad(url):
 	#PATH = "./DataViewLinux.x86_64 &"
-	PATH = "Untitled.app/Contents/MacOS/Untitled &"
+	#PATH = "Untitled.app/Contents/MacOS/Untitled &"
+	PATH = "DataView_win_DirectToRift &"
 	print """
-	 __      __       .__                               
-	/  \    /  \ ____ |  |   ____  ____   _____   ____  
-	\   \/\/   // __ \|  | _/ ___\/  _ \ /     \_/ __ \ 
-	 \        /\  ___/|  |_\  \__(  <_> )  Y Y  \  ___/ 
+	 __      __       .__
+	/  \    /  \ ____ |  |   ____  ____   _____   ____
+	\   \/\/   // __ \|  | _/ ___\/  _ \ /     \_/ __ \
+	 \        /\  ___/|  |_\  \__(  <_> )  Y Y  \  ___/
 	  \__/\  /  \___  >____/\___  >____/|__|_|  /\___  >
 	       \/       \/          \/            \/     \/
 	       """
@@ -22,7 +23,3 @@ def doodad(url):
 
 
 	os.system(PATH)
-
-
-
-
