@@ -42,9 +42,9 @@ class App:
 		variables = requests.get(url + "?meta=yes").json()
 		for thing in variables['Vars']:
 			self.extraNames.insert(END, thing)
-	
 
-	
+
+
 
     def __init__(self, master):
     	frame = Frame(master)
@@ -54,10 +54,10 @@ class App:
 	scrollbar = Scrollbar(master)
 	scrollbar.pack(side=LEFT, fill=Y)
 
-	
+
 	self.listbox = Listbox(master, yscrollcommand=scrollbar.set, width=70)
 	self.listbox.pack(side=LEFT, fill=BOTH)
-	
+
 	self.listbox.bind('<Double-Button-1>', self.onselect)
 #START/END RAYS
 	Label(master, text="Starting\nRay").pack(side=LEFT)
@@ -86,7 +86,7 @@ class App:
 
 	for name in self.default_names:
 		self.nameManager.insert(END, name)
-	
+
 	self.entry = Entry(frame, width=50)
 	self.entry.pack(side=LEFT)
 	self.entry.insert(0, "http://127.0.0.1:5000/data/home")
@@ -108,14 +108,14 @@ class App:
 
 
 
-	
+
 
     def download(self, url):
     	files = requests.get(url + self.entryGET.get()).json()
     	self.listbox.delete(0, END)
     	for file in files["Files"]:
     		self.listbox.insert(END, file)
-    	
+
 
     def removeName(self, evt):
     	w= evt.widget
@@ -129,7 +129,7 @@ class App:
     	self.nameManager.insert(END, w.get(index))
     	w.delete(ANCHOR)
 
-	
+
     def send(self):
     	theNames = ""
     	for i in range(0, self.nameManager.size()):
@@ -137,7 +137,7 @@ class App:
     	print theNames
     	extra = ("&firstray="+self.start_ray+"&lastray="+self.end_ray+"&firstsample="+self.start_sample+"&lastsample="+self.end_sample+"&names="+theNames)
     	print "SENDING URL", self.entry.get() + self.entryGET.get() + "&doSend=yes" + extra
-    	MIT.doodad(self.entry.get() + self.entryGET.get() + "&doSend=yes" + extra)
+    	MIT.send(self.entry.get() + self.entryGET.get() + "&doSend=yes" + extra)
 
 
 
@@ -147,4 +147,4 @@ root = Tk()
 app = App(root)
 
 root.mainloop()
-root.destroy() 
+root.destroy()

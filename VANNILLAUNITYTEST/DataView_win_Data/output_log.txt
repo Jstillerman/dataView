@@ -20,7 +20,7 @@ Platform assembly: C:\Users\Jason\Documents\Programming\dataView\VANNILLAUNITYTE
 Loading C:\Users\Jason\Documents\Programming\dataView\VANNILLAUNITYTEST\DataView_win_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\Jason\Documents\Programming\dataView\VANNILLAUNITYTEST\DataView_win_Data\Managed\ICSharpCode.SharpZipLib.dll (this message is harmless)
 Loading C:\Users\Jason\Documents\Programming\dataView\VANNILLAUNITYTEST\DataView_win_Data\Managed\ICSharpCode.SharpZipLib.dll into Unity Child Domain
-- Completed reload, in  0.040 seconds
+- Completed reload, in  0.187 seconds
 <RI> Initializing input.
 XInput1_3.dll not found.
 <RI> Input initialized.
@@ -1668,15 +1668,6 @@ delpwr
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
 
-0 key down
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-IndexOutOfRangeException: Array index is out of range.
-  at mainScript.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
 raycast enabled
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
@@ -2057,14 +2048,25 @@ raycast enabled
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
 
-0 key down
+5 key down
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
 
-IndexOutOfRangeException: Array index is out of range.
-  at mainScript.Update () [0x00000] in <filename unknown>:0 
+5 key down
  
-(Filename:  Line: -1)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+5 key down
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+6 key down
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+4 key down
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
 
 1 key down
  
@@ -2078,15 +2080,27 @@ IndexOutOfRangeException: Array index is out of range.
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
 
-4 key down
+3 key down
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
 
-5 key down
+2 key down
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
 
-5 key down
+1 key down
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+1 key down
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+2 key down
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+3 key down
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
 

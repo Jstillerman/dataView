@@ -5,8 +5,8 @@ import mk_json
 
 app = Flask(__name__)
 
-def retr(thingy):
-    return request.args.get(thingy, '')
+def retr(attr):
+    return request.args.get(attr, '')
 
 
 @app.route('/')
@@ -15,9 +15,9 @@ def hello_world():
 
 
 
-@app.route('/data/<path:blah>', methods=['GET'])
-def send_foo(blah = ""):
-    blah = "/" + blah
+@app.route('/data/<path:path>', methods=['GET'])
+def send_foo(path = ""):
+    path = "/" + path
     print retr("key")
     if(request.args.get("doSend", '')):
         if(request.args.get("doSend", '').lower()[0] == "y"):
@@ -33,16 +33,16 @@ def send_foo(blah = ""):
         if(retr("meta").lower()[0] == "y"):
             variables = mk_json.getMeta(blah)
             return jsonify({"Vars" : variables})
-	       
-    if os.path.isfile(blah):
-        stuff = os.listdir(os.path.dirname(blah))
+
+    if os.path.isfile(path):
+        cont = os.listdir(os.path.dirname(path))
     else:
-        stuff = os.listdir((blah))
-    stuff.append("..")
-    stuff.sort()
+        cont = os.listdir((path))
+    cont.append("..")
+    cont.sort()
 
 
-    return jsonify({"Files" : stuff})
+    return jsonify({"Files" : cont})
 
 if __name__ == '__main__':
     app.debug = True;
