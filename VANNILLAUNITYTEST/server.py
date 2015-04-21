@@ -27,11 +27,11 @@ def send_foo(path = ""):
 	    sample2=int(retr("lastsample"))
 	    theNames=retr("names").split()
 	    print theNames
-            return jsonify(mk_json.convert(theFile=blah, first_ray=ray1, last_ray=ray2, first_sample=sample1, last_sample=sample2, names=theNames))
+            return jsonify(mk_json.convert(theFile=path, first_ray=ray1, last_ray=ray2, first_sample=sample1, last_sample=sample2, names=theNames))
 
     if(retr("meta")):
         if(retr("meta").lower()[0] == "y"):
-            variables = mk_json.getMeta(blah)
+            variables = mk_json.getMeta(path)
             return jsonify({"Vars" : variables})
 
     if os.path.isfile(path):
