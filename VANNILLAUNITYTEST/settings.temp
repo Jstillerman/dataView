@@ -1,1 +1,1 @@
-http://127.0.0.1:5000/data/home?key=hi&doSend=yes&firstray=1&lastray=9&firstsample=1&lastsample=61&names=delpwr%20wnpar%20spsi%20wr%20wz%20wphi%20ws%20
+http://127.0.0.1:5000/data/home/jts/a.nc?key=hi&doSend=yes&firstray=1&lastray=5&firstsample=1&lastsample=100&names=delpwr%20wnpar%20spsi%20ws%20wr%20wz%20wphi%20wnper%20

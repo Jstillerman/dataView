@@ -19,6 +19,9 @@ public var show = [false, false, false, false, false, false, false];
 
 function Start () {
 
+
+url = System.IO.File.ReadAllText("C:\\Users\\Jason\\Documents\\Programming\\dataView\\VANNILLAUNITYTEST\\settings.temp");
+
 data = new WWW(url); //THIS ACTUALL FETCHES THE DATA
 
 

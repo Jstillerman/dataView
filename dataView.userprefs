@@ -1,8 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\CmodInterior\Assets\scripts\rotate.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\mainScript.js">
     <Files>
-      <File FileName="..\CmodInterior\Assets\scripts\rotate.cs" Line="14" Column="30" />
+      <File FileName="Assets\mainScript.js" Line="23" Column="106" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
